@@ -31,7 +31,9 @@
     <br>
     <button id="make-goldenRod" >GoldenRod</button> -->
 
-    
+     <p id="secret-info">bangledesh</p>
+     <input id="delete-confirm" type="text">
+     <button id="delete-btn">Delete</button>
 
     <!------------------------------------
         javascript link
@@ -39,8 +41,21 @@
   <script src="script-M-26.js"></script>
   <script>
 
-      
+      document.getElementById('delete-confirm').addEventListener('keyup', function(event){
+      const text = event.target.value;
+      const deleteButton = document.getElementById('delete-confirm');
+      if(text === 'delete'){
+        deleteButton.removeAttribute('disabled')
+      }
+      else{
+        deletButton.setAttribute('disabled', true);
+      }
+    });
 
+    document.getElementById('delete-btn').addEventListener('click', function(){
+        const secretInfo =document.getElementById('secret-info');
+        secretInfo.style.display ='none'
+    })
     
   </script>
 </body>
